@@ -3,9 +3,12 @@ import { replaceInFileSync } from "replace-in-file";
 // define fixes
 function replaceFix() {
   const options = {
-    files: ["publication/**/*.html", "publication/**/*.css"],
-    from: [/'Quicksand'/g, /\"Quicksand\"/g],
-    to: ["Quicksand", "Quicksand"],
+    files: [
+      "publication/**/*.html",
+      "publication/**/*.css"
+    ],
+    from: [/http:\/\/localhost/g],
+    to: [""],
   };
 
   try {
