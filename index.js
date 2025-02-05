@@ -7,8 +7,8 @@ function replaceFix() {
       "publication/**/*.html",
       "publication/**/*.css"
     ],
-    from: [/http:\/\/localhost/g],
-    to: [""],
+    from: [/http:\/\/localhost/g, /href="[^"]*\?action=kirki-styles&amp;ver=3.1.9"/g],
+    to: ['', 'href="/wp-content/css/kirki-styles.css"'],
   };
 
   try {
